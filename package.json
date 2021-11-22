@@ -1,0 +1,14 @@
+{
+  "name": "fitbit-byte-register",
+  "version": "0.0.1",
+  "description": "Pack, edit, and easily retrieve variables and binary data into an efficient memory register via typed arrays.",
+  "main": "index.js",
+  "repository": "https://github.com/enkrdn/fitbit-byte-register",
+  "author": "enkrdn",
+  "license": "MIT",
+  "private": false,
+  "type": "module",
+  "scripts": {
+    "tests": "node tests.js"
+  }
+}
