@@ -79,6 +79,6 @@ See `/todos.md` and `/.todos`
 
 ## Author
 
-[![ENCHIRIDION TECH](https://www.lexaloffle.com/media/58902/5_gds.png)](https://enkrdn.tech)
+[![ENCHIRIDION TECH](https://www.lexaloffle.com/media/58902/5_gds.png)](https://enkrdn.tech/github)
 
 [ENCHIRIDION TECH](https://enkrdn.tech/github)
