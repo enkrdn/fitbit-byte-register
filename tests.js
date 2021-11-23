@@ -14,18 +14,22 @@ reg.newInt('lives',4,0xF);
 console.log('\nchanging values');
 reg.write('energy',2);
 reg.write('hp',11);
+reg.read('energy');
+reg.read('hp');
 
 // increment/decrement
-console.log('decrement a variable');
+console.log('\ndecrement a variable');
 reg.write('lives',reg.read('lives')-1); reg.read('lives');
 
+// wraps around indices automatically
+console.log('\nwraps around indices automatically');
 reg.newInt('boss health',8,0b10101010);
-
 console.log(reg._leftPad32(reg._reg[1]) + ' boss health');
 
 console.log((reg.read('boss health') >>> 0).toString(2));
 
 // max out a variable; it clamps automatically
+console.log('\nclamps variables to prevent underflows and overflows');
 reg.newInt('item id',8,Infinity);
 reg.read('item id');
 reg.write('item id',-5);// all vars are unsigned, so this will clamp to 0.
