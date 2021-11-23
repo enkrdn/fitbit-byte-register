@@ -5,35 +5,35 @@ var reg = new Register(2,true);
 
 // create variables
 console.log('setting up vars');
-reg.newInt('energy',3,7);
-reg.newInt('hp',5,20);
-reg.newInt('coins',16,999);
-reg.newInt('lives',4,0xF);
+const energy = reg.newInt(3,7);
+const hp = reg.newInt(5,20);
+const coins = reg.newInt(16,999);
+const lives = reg.newInt(4,0xF);
 
 // change variables
 console.log('\nchanging values');
-reg.write('energy',2);
-reg.write('hp',11);
-reg.read('energy');
-reg.read('hp');
+reg.write(energy,2);
+reg.write(hp,11);
+reg.read(energy);
+reg.read(hp);
 
 // increment/decrement
 console.log('\ndecrement a variable');
-reg.write('lives',reg.read('lives')-1); reg.read('lives');
+reg.write(lives,reg.read(lives)-1); reg.read(lives);
 
 // wraps around indices automatically
 console.log('\nwraps around indices automatically');
-reg.newInt('boss health',8,0b10101010);
-console.log(reg._leftPad32(reg._reg[1]) + ' boss health');
+const bossHealth = reg.newInt(8,0b10101010);// 170
+console.log(reg._leftPad32(reg._reg[1]));
 
-console.log((reg.read('boss health') >>> 0).toString(2));
+console.log((reg.read(bossHealth) >>> 0).toString(2));
 
 // max out a variable; it clamps automatically
 console.log('\nclamps variables to prevent underflows and overflows');
-reg.newInt('item id',8,Infinity);
-reg.read('item id');
-reg.write('item id',-5);// all vars are unsigned, so this will clamp to 0.
-reg.read('item id');
+const itemId = reg.newInt(8,Infinity);
+reg.read(itemId);
+reg.write(itemId,-5);// all vars are unsigned, so this will clamp to 0.
+reg.read(itemId);
 
 // reg.read('energy');
 // reg.read('hp');

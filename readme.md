@@ -9,16 +9,16 @@ Pack, edit, and easily retrieve variables and binary data into an efficient memo
 `const reg = new Register(2);// 2x32 bits`
 
 ### Add a Variable
-`reg.newInt('hit points',7,100);// 7 bits long = max val of 127`
+`const hitPoints = reg.newInt(7, 100);// 7 bits long = max val of 127; set to 100`
 
 ### Modify a Variable
-`reg.write('hit points',4);`
+`reg.write(hitPoints, 4);`
 
 ### Read a Variable
-`reg.read('hit points');// 4`
+`reg.read(hitPoints);// 4`
 
 ### Increment a Variable
-`reg.write('hit points',reg.read('hit points')+1);`
+`reg.write(hitPoints, reg.read(hitPoints) + 1);`
 
 ## Why?
 Memory management is critical in Fitbit development. Despite the convenience of their JavaScript SDK, there are nuances that can bloat your memory usage badly.
