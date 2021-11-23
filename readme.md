@@ -5,6 +5,7 @@ Pack, edit, and easily retrieve variables and binary data into an efficient memo
 
 ### Install & Initialize
 `import Register from 'fitbit-byte-register'`
+
 `const reg = new Register(2);// 2x32 bits`
 
 ### Add a Variable
@@ -49,7 +50,7 @@ fitbit-byte-register will allocate your 4 bits in a Uint32Array and keep track o
 
 You can fit up to 32 named variables in each element of the Uint32Array, and the array can be as long as needed (within memory limits of course).
 
-Variablels can be as long as you want (in bits) and may span across Uint32Array boundaries:
+Variables can be as long as you want (in bits) and may span across Uint32Array boundaries:
 
 ```my number to add: 101101101011 (12 bits)```
 
