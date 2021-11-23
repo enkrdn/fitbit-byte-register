@@ -1,3 +1,6 @@
 node_modules
 yarn-error.log
 *.code-workspace
+
+fitbit-memory-test/node_modules
+fitbit-memory-test/build

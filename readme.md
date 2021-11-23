@@ -69,6 +69,10 @@ The 12-bit variable is written across 2 Uint32Array elements; the first 4 bits a
 
 When you write or read to this variable, it will always use this range of bits, even across Uint32Array indexes. Values are automatically clamped with a console.warn if their values would exceed their range, so no overflows are allowed.
 
+## Memory
+(calculations forthcoming)
+536 bytes to import module(?)
+
 ## Todo
 See `/todos.md` and `/.todos`
 
